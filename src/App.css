@@ -4,6 +4,8 @@ body {
   align-items: center;
   min-height: 100vh;
   background-color: rgb(45, 1, 87);
+  font-family: sans-serif;
+  overflow-y: hidden;
 }
 
 button {
@@ -11,28 +13,43 @@ button {
   border-radius: 10px;
   margin: 5px 0;
   border: none;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(231, 220, 241);
 }
 
 #time-left {
-  background-color: rgb(215, 190, 240);
-  color: rgb(40, 13, 68);
+  background-color: rgb(80, 6, 155);
+  color: rgb(255, 255, 255);
   padding: 30px;
   border-radius: 30px;
   font-size: 2rem;
+  margin: 30px 0;
 }
 
 #time-selectors {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
   color: #fff;
 }
 
 .time-selector {
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  margin: 0 20px;
+  text-align: center;
+}
+
+.time-selector button {
+  height: 35px;
+  width: 35px;
 }
 
 #play-pause-reset-btns-wrapper {
@@ -42,5 +59,5 @@ button {
 }
 
 #play-pause-reset-btns-wrapper button {
-  margin-right: 20px;
+  margin: 0 20px;
 }

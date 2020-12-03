@@ -2,7 +2,7 @@ import "./App.css";
 import { useState, useEffect, useRef } from "react";
 
 function App() {
-  const [secondsLeft, setSecondsLeft] = useState(3);
+  const [secondsLeft, setSecondsLeft] = useState(900);
   const [timerOn, setTimerOn] = useState(false);
 
   // Assignments would be lost after each render. To preserve the value over time, store it in a useRef to store the mutable value in the .current property.
@@ -59,17 +59,11 @@ function App() {
   // Reset to initial state
   const reset = () => {
     setTimerOn(false);
-    setSecondsLeft(4500);
+    setSecondsLeft(900);
   };
 
   return (
     <div className="App">
-      <section id="time-left">
-        <span>{clockify().clockifiedHours} hour </span>
-        <span>{clockify().clockifiedMins} mins </span>
-        <span>{clockify().clockifiedSecs} secs</span>
-      </section>
-
       <section id="time-selectors">
         <div className="time-selector">
           <button onClick={incrementHours}>+1</button>
@@ -81,6 +75,12 @@ function App() {
           <span>Mins</span>
           <button onClick={decrementMins}>-5</button>
         </div>
+      </section>
+
+      <section id="time-left">
+        <span>{clockify().clockifiedHours} Hour </span>
+        <span>{clockify().clockifiedMins} Mins </span>
+        <span>{clockify().clockifiedSecs} Secs</span>
       </section>
 
       <section id="play-pause-reset-btns-wrapper">
